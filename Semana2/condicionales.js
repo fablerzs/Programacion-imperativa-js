@@ -25,6 +25,22 @@ const entrada = (edad) => {
 let resultadoEntrada = entrada(21)
 console.log(resultadoEntrada)
 
+
+//total a PAGAR gasolina
+
+let totalAPagar = (vehiculo, litrosConsumidos) => {
+    let precioLitro
+    if (vehiculo === coche) {
+        precioLitro = 86
+    } else if (vehiculo === moto) {
+        precioLitro = 70
+    } else if (vehiculo === autobus) {
+        precioLitro = 55 
+    }
+
+
+}
+
 // LOCAL SANDWICHES
 
 let miOrden = (tipoSandwich, pan, queso, tomate, lechuga, cebolla, mayonesa, mostaza) => {
@@ -48,7 +64,7 @@ let miOrden = (tipoSandwich, pan, queso, tomate, lechuga, cebolla, mayonesa, mos
     //seleccionar PAN
 
     if (pan == 'blanco') {
-        total += 50
+        total += 50  
     }
     else if (pan == 'negro') {
         total +=60
@@ -83,7 +99,7 @@ let miOrden = (tipoSandwich, pan, queso, tomate, lechuga, cebolla, mayonesa, mos
 
 }
 
-let resultado = miOrden('pollo', 'negro', true, true, true, false, true, false); 
+let resultado = miOrden('pollo', 'negro', true, true, true, true, true, false); 
 console.log('El total de la orden es : $'+ resultado);
 
 
@@ -97,7 +113,7 @@ let abrirParacaidas = (velocidad, altura) => {
     }
 }
 
-abrirParacaidas(500,2999)
+abrirParacaidas(1500,6999)
 
 
 // NUMERO SECRETO
@@ -115,3 +131,29 @@ let crearNumeroSecreto = (min, max, numeroIngresado) => {
   
 crearNumeroSecreto(1, 10,6)
 
+
+
+// PELICULAS
+
+let valorarPeliculas = (valoracion) => {
+    switch (valoracion) {
+        case 1:
+            console.log("Calificaste la pelicula como muy mala. Lo lamentamos mucho. Agradecemos tu valoracion ")
+            break;
+        case 2:
+            console.log("Calificaste la pelicula como mala. Lo lamentamos mucho. Agradecemos tu valoracion ")
+            break;
+        case 3:
+            console.log("Calificaste la pelicula como mediocre. Lo lamentamos mucho. Agradecemos tu valoracion ")
+            break;
+        case 4:
+            console.log("Calificaste la pelicula como buena. Nos alegramos. Agradecemos tu valoracion ")
+            break;
+        case 5:
+            console.log("Calificaste la pelicula como muy buena. Nos alegramos. Agradecemos tu valoracion")
+            break;
+        default : console.log("Ingresaste valor invalido")
+    }
+}
+
+valorarPeliculas(4)
